@@ -1,0 +1,809 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Understanding Windows Versions and Editions Before You Install</title>
+
+  <meta name="description" content="Learn the differences between Windows 10 and Windows 11, compare Home, Pro, Enterprise and Education editions, and check compatibility before installing Windows.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/windows-versions-editions-guide/">
+
+  <meta property="og:title" content="Understanding Windows Versions and Editions Before You Install">
+  <meta property="og:description" content="A practical guide to Windows versions, editions, compatibility and support information.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://YOUR-GITHUB-USERNAME.github.io/windows-versions-editions-guide/">
+
+  <style>
+    :root {
+      --blue: #1769d2;
+      --dark-blue: #104b9b;
+      --light-blue: #eef6ff;
+      --text: #263445;
+      --muted: #627184;
+      --border: #dce6f2;
+      --white: #ffffff;
+      --background: #f5f8fc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--background);
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--dark-blue);
+      text-decoration: underline;
+    }
+
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1120px;
+      margin: auto;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 23px;
+      font-weight: 800;
+      color: var(--blue);
+      letter-spacing: -0.5px;
+    }
+
+    .navigation {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #eaf3ff, #ffffff);
+      border-bottom: 1px solid var(--border);
+      padding: 54px 22px;
+    }
+
+    .hero-inner {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    h1 {
+      color: #17365f;
+      font-size: clamp(30px, 5vw, 45px);
+      line-height: 1.2;
+      margin: 12px 0 18px;
+      letter-spacing: -1px;
+    }
+
+    .hero p {
+      max-width: 780px;
+      font-size: 17px;
+      color: #506176;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      padding: 11px 18px;
+      border-radius: 7px;
+      font-weight: 700;
+      margin: 10px 8px 0 0;
+    }
+
+    .button:hover {
+      background: var(--dark-blue);
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: var(--white);
+      color: var(--blue);
+      border: 1px solid var(--blue);
+    }
+
+    .layout {
+      max-width: 1120px;
+      margin: 32px auto;
+      padding: 0 22px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 275px;
+      gap: 26px;
+      align-items: start;
+    }
+
+    article,
+    .sidebar-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 5px 20px rgba(27, 64, 110, 0.04);
+    }
+
+    article section {
+      margin-bottom: 34px;
+      scroll-margin-top: 20px;
+    }
+
+    h2 {
+      font-size: 26px;
+      line-height: 1.35;
+      color: #173f73;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      color: #214e80;
+      font-size: 19px;
+      margin-top: 24px;
+    }
+
+    p {
+      margin: 12px 0;
+    }
+
+    .note {
+      background: var(--light-blue);
+      border-left: 4px solid var(--blue);
+      padding: 15px 18px;
+      border-radius: 5px;
+      margin: 20px 0;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      min-width: 540px;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--border);
+      padding: 12px 13px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--light-blue);
+      color: #173f73;
+    }
+
+    tr:nth-child(even) td {
+      background: #fafcff;
+    }
+
+    .sidebar-card {
+      margin-bottom: 20px;
+      padding: 22px;
+    }
+
+    .sidebar-card h3 {
+      margin-top: 0;
+    }
+
+    .sidebar-card ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .sidebar-card li {
+      margin: 9px 0;
+    }
+
+    .related-link {
+      display: block;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-weight: 600;
+    }
+
+    .related-link:last-child {
+      border-bottom: none;
+    }
+
+    .site-footer {
+      background: #102b4c;
+      color: #e7f0fc;
+      margin-top: 45px;
+      padding: 30px 22px;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    .site-footer a {
+      color: #b8d7ff;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 12px;
+    }
+
+    .small {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .site-footer .small {
+      color: #c2d0e2;
+    }
+
+    @media (max-width: 820px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .navigation {
+        gap: 12px;
+      }
+
+      article {
+        padding: 21px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-inner {
+        padding: 16px;
+      }
+
+      .hero {
+        padding: 38px 18px;
+      }
+
+      .layout {
+        padding: 0 14px;
+      }
+
+      h2 {
+        font-size: 23px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Understanding Windows Versions and Editions Before You Install",
+    "description": "A practical guide to Windows versions, editions, compatibility and support information.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://YOUR-GITHUB-USERNAME.github.io/windows-versions-editions-guide/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Windowstan Guide",
+      "url": "https://windowstan.com/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://windowstan.com/">Windowstan</a>
+
+      <nav class="navigation" aria-label="Main navigation">
+        <a href="https://windowstan.com/">Home</a>
+        <a href="#versions">Windows Versions</a>
+        <a href="#editions">Editions</a>
+        <a href="#compatibility">Compatibility</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Windows Installation Guide</div>
+
+      <h1>Understanding Windows Versions and Editions Before You Install</h1>
+
+      <p>
+        Choosing the right Windows version and edition can help you avoid
+        compatibility problems and select features that match your needs.
+        This guide explains the main differences, hardware requirements,
+        edition choices and support information to check before installing.
+      </p>
+
+      <a class="button" href="#comparison">Compare Windows Options</a>
+      <a class="button secondary" href="https://windowstan.com/">Visit Windowstan</a>
+    </div>
+  </section>
+
+  <div class="layout">
+
+    <main>
+      <article>
+
+        <section id="introduction">
+          <h2>Introduction</h2>
+
+          <p>
+            Before installing Windows, it is useful to understand the
+            difference between a Windows version and an edition. Your choice
+            can affect hardware compatibility, available features, licensing
+            requirements and the period during which your system receives
+            support.
+          </p>
+
+          <p>
+            Start by checking your computer's specifications, identifying
+            your intended use and reviewing Microsoft's official support
+            information. Do not choose an installer simply because it has
+            a familiar name.
+          </p>
+        </section>
+
+        <section id="versions">
+          <h2>1. What Is the Difference Between a Windows Version and Edition?</h2>
+
+          <p>
+            A <strong>Windows version</strong> identifies a particular release
+            of the operating system. A <strong>Windows edition</strong>
+            identifies a product variant, such as Home or Pro, with its own
+            feature set and licensing terms.
+          </p>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Term</th>
+                  <th>What It Means</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Operating system</td>
+                  <td>The Windows product family installed on a computer.</td>
+                  <td>Windows 11</td>
+                </tr>
+                <tr>
+                  <td>Version</td>
+                  <td>A specific release within that operating system.</td>
+                  <td>Windows 11, version 24H2</td>
+                </tr>
+                <tr>
+                  <td>Edition</td>
+                  <td>A variant with specific features and licensing.</td>
+                  <td>Home or Pro</td>
+                </tr>
+                <tr>
+                  <td>System architecture</td>
+                  <td>The processor architecture supported by the installation.</td>
+                  <td>x64 or ARM64</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            These details are not interchangeable. Always check the exact
+            release, edition and architecture before downloading installation
+            media or upgrading a device.
+          </p>
+        </section>
+
+        <section id="comparison">
+          <h2>2. Windows 10 vs. Windows 11</h2>
+
+          <p>
+            Windows 10 and Windows 11 have different hardware requirements
+            and support timelines. A computer that runs Windows 10 may not
+            meet the official requirements for Windows 11.
+          </p>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Factor</th>
+                  <th>Windows 10</th>
+                  <th>Windows 11</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Hardware</td>
+                  <td>Requirements depend on the edition and device.</td>
+                  <td>Requires compatible hardware, including TPM 2.0 and supported CPU specifications.</td>
+                </tr>
+                <tr>
+                  <td>Interface</td>
+                  <td>Traditional Windows 10 desktop and Start menu.</td>
+                  <td>Updated interface and productivity features.</td>
+                </tr>
+                <tr>
+                  <td>Standard support</td>
+                  <td>Standard support for Home and Pro ended October 14, 2025.</td>
+                  <td>Support dates depend on the exact release and edition.</td>
+                </tr>
+                <tr>
+                  <td>Best next step</td>
+                  <td>Check your edition and any applicable extended security options.</td>
+                  <td>Check compatibility and the lifecycle for your specific release.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="note">
+            <strong>Important:</strong> Windows 10 Home and Pro reached the end
+            of standard support on October 14, 2025. Eligible devices may have
+            extended security update options, and some specialized editions
+            have different lifecycle dates. Verify the status that applies
+            to your particular device and edition.
+          </div>
+
+          <p>
+            For official information, visit Microsoft's
+            <a href="https://www.microsoft.com/windows" target="_blank" rel="noopener noreferrer">Windows website</a>
+            and
+            <a href="https://learn.microsoft.com/en-us/lifecycle/" target="_blank" rel="noopener noreferrer">Microsoft Lifecycle documentation</a>.
+          </p>
+        </section>
+
+        <section id="editions">
+          <h2>3. Windows Home vs. Pro vs. Enterprise vs. Education</h2>
+
+          <p>
+            Windows editions are designed for different needs. Availability
+            of specific features depends on the release, licensing and
+            device configuration.
+          </p>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Edition</th>
+                  <th>Typical Audience</th>
+                  <th>Consider It When</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Home</td>
+                  <td>Personal users and households</td>
+                  <td>You need everyday computing, browsing, entertainment and common applications.</td>
+                </tr>
+                <tr>
+                  <td>Pro</td>
+                  <td>Professionals and small businesses</td>
+                  <td>You need business management features, Remote Desktop hosting or BitLocker where supported.</td>
+                </tr>
+                <tr>
+                  <td>Enterprise</td>
+                  <td>Organizations</td>
+                  <td>Your organization requires advanced deployment, security and management capabilities under appropriate licensing.</td>
+                </tr>
+                <tr>
+                  <td>Education</td>
+                  <td>Eligible educational institutions and users</td>
+                  <td>Your institution provides an eligible license and requires education-focused management features.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            For most personal computers, Home may be sufficient. Pro can be
+            useful for users who need its additional features. Enterprise
+            and Education availability depends on organizational eligibility
+            and licensing.
+          </p>
+
+          <p>
+            Check Microsoft's official
+            <a href="https://www.microsoft.com/windows/compare-windows-11-home-vs-pro-versions" target="_blank" rel="noopener noreferrer">Windows Home and Pro comparison</a>
+            before making a decision.
+          </p>
+        </section>
+
+        <section id="compatibility">
+          <h2>4. Check Hardware Requirements and Compatibility</h2>
+
+          <p>
+            Before installing Windows 11, review the official system
+            requirements. Meeting only the memory or storage requirement
+            does not guarantee that a computer is supported.
+          </p>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Requirement</th>
+                  <th>Windows 11 Baseline</th>
+                  <th>What to Check</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Processor</td>
+                  <td>Compatible 64-bit processor or supported system-on-chip</td>
+                  <td>Exact model and supported processor list</td>
+                </tr>
+                <tr>
+                  <td>Memory</td>
+                  <td>4 GB RAM</td>
+                  <td>Installed RAM and device configuration</td>
+                </tr>
+                <tr>
+                  <td>Storage</td>
+                  <td>64 GB or larger storage device</td>
+                  <td>Free space and additional update requirements</td>
+                </tr>
+                <tr>
+                  <td>Firmware</td>
+                  <td>UEFI firmware with Secure Boot capability</td>
+                  <td>Firmware settings and device support</td>
+                </tr>
+                <tr>
+                  <td>Security</td>
+                  <td>TPM version 2.0</td>
+                  <td>TPM availability and status</td>
+                </tr>
+                <tr>
+                  <td>Graphics</td>
+                  <td>DirectX 12 compatible graphics with WDDM 2.0 driver</td>
+                  <td>Graphics hardware and driver compatibility</td>
+                </tr>
+                <tr>
+                  <td>Display</td>
+                  <td>Over 9 inches diagonally, HD resolution of 720p or greater</td>
+                  <td>Display size and resolution</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            These are baseline requirements, not a guarantee that every
+            feature will work on every device. Some features have additional
+            requirements.
+          </p>
+
+          <p>
+            Use Microsoft's official
+            <a href="https://www.microsoft.com/windows/windows-11-specifications" target="_blank" rel="noopener noreferrer">Windows 11 specifications and requirements</a>
+            page to verify the latest details.
+          </p>
+        </section>
+
+        <section id="check-version">
+          <h2>5. How to Check Your Current Windows Version</h2>
+
+          <h3>Method 1: Use the winver command</h3>
+
+          <ol>
+            <li>Press <strong>Windows + R</strong> on your keyboard.</li>
+            <li>Type <code>winver</code> in the Run box.</li>
+            <li>Press Enter.</li>
+            <li>Read the displayed Windows name, version and OS build.</li>
+          </ol>
+
+          <h3>Method 2: Open Settings</h3>
+
+          <ol>
+            <li>Open Settings on your computer.</li>
+            <li>Select System.</li>
+            <li>Choose About.</li>
+            <li>Review Windows specifications and device specifications.</li>
+          </ol>
+
+          <p>
+            Record your Windows edition, version, OS build, processor model
+            and installed RAM before planning an upgrade.
+          </p>
+        </section>
+
+        <section id="support">
+          <h2>6. Check Official Windows Support Information</h2>
+
+          <p>
+            Support status can vary by release, edition and servicing
+            channel. Do not assume that every version of Windows 11 has
+            the same end-of-support date.
+          </p>
+
+          <ul>
+            <li>
+              <a href="https://learn.microsoft.com/en-us/lifecycle/products/" target="_blank" rel="noopener noreferrer">Microsoft Product Lifecycle</a>
+              — look up support information for a specific product.
+            </li>
+            <li>
+              <a href="https://learn.microsoft.com/en-us/lifecycle/faq/windows" target="_blank" rel="noopener noreferrer">Windows Lifecycle FAQ</a>
+              — review Microsoft's Windows lifecycle guidance.
+            </li>
+            <li>
+              <a href="https://www.microsoft.com/software-download/windows11" target="_blank" rel="noopener noreferrer">Download Windows 11</a>
+              — access Microsoft's official Windows 11 download options.
+            </li>
+          </ul>
+
+          <div class="note">
+            Always back up important files before upgrading or reinstalling
+            Windows. Confirm that your applications, drivers, license and
+            hardware are compatible before proceeding.
+          </div>
+        </section>
+
+        <section id="resources">
+          <h2>7. Explore More Windows Resources</h2>
+
+          <p>
+            Once you understand the differences between versions and
+            editions, you can continue researching Windows installation,
+            compatibility and setup information.
+          </p>
+
+          <p>
+            Visit <a href="https://windowstan.com/">Windowstan</a> to explore
+            related Windows resources. Review the information carefully and
+            verify system requirements and downloads against official
+            Microsoft documentation.
+          </p>
+
+          <div class="note">
+            <strong>Related guide:</strong>
+            Continue reading the
+            <a href="https://windowstan-guide-windows-resources.vercel.app/" target="_blank" rel="noopener noreferrer">Windowstan Guide to Windows Resources, Features and Safe Setup</a>
+            for additional general guidance.
+          </div>
+
+          <a class="button" href="https://windowstan.com/">Explore Windowstan</a>
+          <a class="button secondary" href="https://windowstan-guide-windows-resources.vercel.app/">Read the Vercel Guide</a>
+        </section>
+
+        <section id="conclusion">
+          <h2>Conclusion</h2>
+
+          <p>
+            Choosing a Windows release is easier when you compare the
+            operating system version, edition, hardware requirements and
+            support status separately. Check compatibility before installing,
+            select an edition that matches your needs and use official
+            Microsoft documentation for current requirements and lifecycle
+            dates.
+          </p>
+
+          <p>
+            A little preparation can help you avoid installation problems
+            and make a more informed decision about your computer.
+          </p>
+        </section>
+
+        <p class="small">
+          Disclaimer: This guide is for general educational purposes.
+          Product features, availability, licensing and support dates may
+          change. Confirm details with Microsoft before installing Windows.
+        </p>
+
+      </article>
+    </main>
+
+    <aside>
+      <div class="sidebar-card">
+        <h3>In This Guide</h3>
+        <ul>
+          <li><a href="#versions">Versions vs. Editions</a></li>
+          <li><a href="#comparison">Windows 10 vs. 11</a></li>
+          <li><a href="#editions">Windows Editions</a></li>
+          <li><a href="#compatibility">Hardware Requirements</a></li>
+          <li><a href="#check-version">Check Your Version</a></li>
+          <li><a href="#support">Support Information</a></li>
+          <li><a href="#resources">More Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Related Websites</h3>
+
+        <a class="related-link" href="https://windowstan.com/">
+          Windowstan Main Website →
+        </a>
+
+        <a class="related-link" href="https://windowstan-guide-windows-resources.vercel.app/">
+          Windows Resources Guide →
+        </a>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Before You Install</h3>
+        <ul>
+          <li>Back up important files.</li>
+          <li>Check hardware compatibility.</li>
+          <li>Verify support status.</li>
+          <li>Use trusted installation media.</li>
+          <li>Confirm your license requirements.</li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <strong>Windowstan Windows Guide</strong>
+
+      <p>
+        Educational information about Windows versions, editions,
+        compatibility and installation preparation.
+      </p>
+
+      <div class="footer-links">
+        <a href="https://windowstan.com/">Main Website</a>
+        <a href="https://windowstan-guide-windows-resources.vercel.app/">Vercel Guide</a>
+        <a href="https://www.microsoft.com/windows">Official Microsoft Windows</a>
+      </div>
+
+      <p class="small">
+        © 2026 Windowstan Guide. Windows is a trademark of Microsoft.
+        This independent educational guide is not affiliated with or
+        endorsed by Microsoft.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
